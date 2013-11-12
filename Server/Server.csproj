@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3004C06D-985E-487D-AE58-C6CAE75907FD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Server</RootNamespace>
+    <AssemblyName>Server</AssemblyName>
+    <newfilesearch>OnLoadAutoInsert</newfilesearch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{55C788CD-1428-4EB2-B4D6-C5B3D100C3C7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ServerController.cs" />
+    <Compile Include="Model\Actions\UseSkillAction.cs" />
+    <Compile Include="Model\ServerAccount.cs" />
+    <Compile Include="View\Terminal.cs" />
+    <Compile Include="Model\Dba\DbaAccount.cs" />
+    <Compile Include="Model\Dba\DbaAccountManager.cs" />
+    <Compile Include="Model\Dba\DbaMongo.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\ConnectionHandler.cs" />
+    <Compile Include="Model\NoSuchClientException.cs" />
+    <Compile Include="Controller\Command.cs" />
+    <Compile Include="Model\GameWorld.cs" />
+    <Compile Include="Model\ServerCharacter.cs" />
+    <Compile Include="Controller\ActionQue.cs" />
+    <Compile Include="Controller\ActionCommand.cs" />
+    <Compile Include="Model\Dba\DbaWorldMapManager.cs" />
+    <Compile Include="Model\CharacterManager.cs" />
+    <Compile Include="Model\WorldMap.cs" />
+    <Compile Include="Model\Actions\Action.cs" />
+    <Compile Include="Model\Actions\TrainAttributeAction.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="dlls\MongoDB.dll" />
+    <None Include="dlls\MongoDB.Driver.dll" />
+    <None Include="App.config" />
+    <None Include="dlls\MongoDB.Bson.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB">
+      <HintPath>dlls\MongoDB.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>dlls\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>dlls\MongoDB.Bson.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

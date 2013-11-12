@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55C788CD-1428-4EB2-B4D6-C5B3D100C3C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <newfilesearch>OnLoadAutoInsert</newfilesearch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Messages\ChatMsg.cs" />
+    <Compile Include="Messages\Client\ClientDeleteCharacterMsg.cs" />
+    <Compile Include="Messages\Client\ClientDisconnectMsg.cs" />
+    <Compile Include="Messages\Client\ClientCreateAccountRequestMsg.cs" />
+    <Compile Include="Messages\Client\ClientLoginRequestMsg.cs" />
+    <Compile Include="Messages\Client\ClientTrainAttributeRequestMsg.cs" />
+    <Compile Include="Messages\MessageManager.cs" />
+    <Compile Include="Messages\Server\ServerShutdownMsg.cs" />
+    <Compile Include="Messages\Server\ServerLoginResponseMsg.cs" />
+    <Compile Include="Messages\Server\ServerKickMsg.cs" />
+    <Compile Include="Messages\Server\ServerCreateAccountResponseMsg.cs" />
+    <Compile Include="Messages\Message.cs" />
+    <Compile Include="Messages\Server\ServerTrainAttributeResponseMsg.cs" />
+    <Compile Include="Messages\Server\ServerTrainAttributeResultMsg.cs" />
+    <Compile Include="Messages\TextMsg.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="util\Crypt.cs" />
+    <Compile Include="util\AssemblyInfo.cs" />
+    <Compile Include="util\NWOException.cs" />
+    <Compile Include="Messages\Client\ClientCreateCharacterRequestMsg.cs" />
+    <Compile Include="Messages\Server\ServerSendCharacterMsg.cs" />
+    <Compile Include="Messages\Server\ServerSendAccountMsg.cs" />
+    <Compile Include="Messages\Server\ServerCreateCharacterResponseMsg.cs" />
+    <Compile Include="AttributeSet.cs" />
+    <Compile Include="SkillSet.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="Posession.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="TerrainMatrix.cs" />
+    <Compile Include="Messages\Client\ClientAreaInfoRequestMsg.cs" />
+    <Compile Include="Messages\Client\ClientMoveCharacterMsg.cs" />
+    <Compile Include="Messages\Client\ClientUseSkillRequestMsg.cs" />
+    <Compile Include="Messages\Server\ServerAreaMsg.cs" />
+    <Compile Include="Messages\Server\ServerCharacterCurrentAreaMsg.cs" />
+    <Compile Include="Messages\Server\ServerMoveCharacterResponseMsg.cs" />
+    <Compile Include="Messages\Server\ServerTerrainMatrixMsg.cs" />
+    <Compile Include="Messages\Server\ServerUseSkillResponseMsg.cs" />
+    <Compile Include="Messages\Server\ServerUseSkillResultMsg.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup />
+</Project>

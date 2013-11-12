@@ -1,0 +1,42 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True">
+          <Node name="Client" expanded="True">
+            <Node name="Controller" expanded="True" />
+            <Node name="Model" expanded="True" />
+            <Node name="View" expanded="True" />
+          </Node>
+          <Node name="Common" expanded="True">
+            <Node name="Messages" expanded="True">
+              <Node name="Client" expanded="True" />
+              <Node name="Server" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="Server" expanded="True">
+            <Node name="Controller" expanded="True" />
+            <Node name="Model" expanded="True" />
+          </Node>
+          <Node name="TestClient" expanded="True" />
+          <Node name="TestCommon" expanded="True" />
+          <Node name="TestServer" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/joel/Projects/nwo-server/Server/Controller/ServerController.cs" line="231" />
+      <Breakpoint file="/home/joel/Projects/nwo-server/Server/Controller/ServerController.cs" line="236" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

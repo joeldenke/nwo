@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40313B87-0C81-4A75-9EF5-AE90DFEAC0D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TestLibrary</RootNamespace>
+    <AssemblyName>TestLibrary</AssemblyName>
+    <newfilesearch>OnLoadAutoInsert</newfilesearch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <Externalconsole>true</Externalconsole>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <Private>False</Private>
+      <Package>mono-nunit</Package>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="TestTextMsg.cs" />
+    <Compile Include="TestClientDisconnectMsg.cs" />
+    <Compile Include="TestServerKickMsg.cs" />
+    <Compile Include="TestServerShutdownMsg.cs" />
+    <Compile Include="TestClientLoginRequestMsg.cs" />
+    <Compile Include="TestServerLoginResponseMsg.cs" />
+    <Compile Include="TestClientCreateAccountRequestMsg.cs" />
+    <Compile Include="TestServerCreateAccountResponseMsg.cs" />
+    <Compile Include="TestClientCreateCharacterMsg.cs" />
+    <Compile Include="TestServerSendAccountMsg.cs" />
+    <Compile Include="TestServerSendCharacterMsg.cs" />
+    <Compile Include="TestArea.cs" />
+    <Compile Include="TestPosition.cs" />
+    <Compile Include="TestTerrainMatrix.cs" />
+    <Compile Include="TestServerTerrainMatrixMsg.cs" />
+    <Compile Include="TestClientMoveCharacterMsg.cs" />
+    <Compile Include="TestServerCharacterCurrentAreaMsg.cs" />
+    <Compile Include="TestServerMoveCharacterResponseMsg.cs" />
+    <Compile Include="TestClientUseSkillRequestMsg.cs" />
+    <Compile Include="TestServerUseSkillResponseMsg.cs" />
+    <Compile Include="TestServerUseSkillResultMsg.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{55C788CD-1428-4EB2-B4D6-C5B3D100C3C7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestCommon.csproj" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-08.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-10.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-11.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-12.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-16.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-19.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-23.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-05-02.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-05-03.xml" />
+    <None Include="test-results\TestCommon.csproj.test-cache" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-29.xml" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-30.xml" />
+    <None Include="TestCommon.csproj.orig" />
+    <None Include="test-results\TestCommon.csproj-Debug-2013-04-17.xml" />
+  </ItemGroup>
+</Project>
